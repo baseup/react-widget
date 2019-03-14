@@ -3,6 +3,11 @@ export type Slot = {
   start: string;
 };
 
+export type Service = {
+  id: number;
+  title: string;
+};
+
 export const services = [
   { id: 1, title: "Haircut" },
   { id: 2, title: "Haircut & Shave" },

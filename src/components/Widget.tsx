@@ -25,9 +25,9 @@ class Widget extends Component {
     const { day, staff, slot } = this.state;
     return (
       <div className="widget">
+        <StaffPicker />
         <DayPicker day={day} onSelect={this._onDaySelect} />
         <Slots slots={slots} selected={slot} onSelect={this._onSlotSelect} />
-        <StaffPicker />
       </div>
     );
   }
