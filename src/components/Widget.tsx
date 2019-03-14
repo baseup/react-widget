@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import DayPicker from "./DayPicker";
 import Slots from "./Slots";
-import { slots } from "../api";
+import { slots, Slot } from "../api";
 import StaffPicker from "./StaffPicker";
 
 class Widget extends Component {
@@ -11,7 +11,7 @@ class Widget extends Component {
     slot: null
   };
 
-  _onSlotSelect = (slot: object) => {
+  _onSlotSelect = (slot: Slot) => {
     console.log("Slot selected", slot);
     this.setState({ slot });
   };
@@ -25,7 +25,6 @@ class Widget extends Component {
     const { day, staff, slot } = this.state;
     return (
       <div className="widget">
-        Widget here
         <DayPicker day={day} onSelect={this._onDaySelect} />
         <Slots slots={slots} selected={slot} onSelect={this._onSlotSelect} />
         <StaffPicker />
