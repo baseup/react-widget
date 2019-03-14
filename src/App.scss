@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.day-picker {
+  display: flex;
+  justify-content: center;
+}
+
+.day-button {
+  padding: 10px;
+  &.selected {
+    background: tomato;
+  }
+}
